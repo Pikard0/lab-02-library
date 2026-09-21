@@ -1,10 +1,12 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
-
 module.exports = {
   entry: './src/app.ts',
+  devtool: 'source-map',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/lab-02-library/',
     clean: true
   },
   resolve: {
